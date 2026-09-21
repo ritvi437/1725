@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Himanshu ❤️ | #Himya</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff7fa;color:#432d35;font-family:Arial,sans-serif}
+.page{min-height:100vh;display:none;align-items:center;justify-content:center;padding:24px;text-align:center}
+.page.on{display:flex}.card{max-width:760px;width:100%;padding:42px 24px;border-radius:30px;background:#fff;box-shadow:0 18px 60px #75465418}
+h1,h2{font-family:Georgia,serif;font-weight:400}h1{font-size:clamp(42px,9vw,76px)}h2{font-size:clamp(32px,7vw,54px)}
+p{line-height:1.8}.quote{font-family:Georgia,serif;font-size:27px;line-height:1.5}
+button,.upload{border:0;border-radius:999px;padding:14px 22px;margin:7px;background:#432d35;color:white;font-weight:700;cursor:pointer}
+.secondary,.upload{background:#f2dfe5;color:#432d35}.hidden{display:none}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:25px 0}.tile{padding:22px;background:#fff7fa;border-radius:20px}
+.gallery{max-width:570px;margin:25px auto}.photo{padding:10px;background:#fff;border-radius:24px;box-shadow:0 12px 35px #75465418}.photo img{width:100%;height:430px;object-fit:cover;border-radius:18px}.caption{font:22px Georgia,serif;margin:14px}
+input{display:none}.sticker{font-size:32px}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}.heart{position:absolute;bottom:-30px;animation:up 5s linear forwards}@keyframes up{to{transform:translateY(-110vh);opacity:0}}
+</style></head><body>
+<div class="hearts" id="hearts"></div>
+
+<section class="page on" id="p1"><div class="card"><div class="sticker">💌🎀</div><p>For my Kuchupuchu ❤️</p><h1>I have a message for you…</h1><p>Do you want to open it?</p>
+<button onclick="go(2)">YES ❤️</button><button class="secondary" onclick="nope()">NO 🙄</button><p id="no" class="hidden">Nice try, Himanshu 😭 You really thought you could escape?</p></div></section>
+
+<section class="page" id="p2"><div class="card"><p>Just one thing before we begin</p><h2>You know what's funny?</h2><p class="quote">“I started this website to tell you how much I love you… and somehow, even all these words still don't feel enough.” 🥹❤️</p><button onclick="go(3)">Keep going →</button></div></section>
+
+<section class="page" id="p3"><div class="card"><p>Our story</p><h2>Before we became us…</h2><p>This was us — just two friends, completely unaware of what we were about to become.</p><div class="grid"><div class="tile">He fell first 😏</div><div class="tile">I fell harder 🥹</div></div><button onclick="go(4)">How it all happened →</button></div></section>
+
+<section class="page" id="p4"><div class="card"><p>Chapter one</p><h2>The plan that became real</h2><p>You just wanted to make someone a little jealous, so you started pretending you liked me.</p><p>But somewhere between the drama, teasing and little moments… <b>you actually fell for me.</b> 🥹</p><p>And I was busy annoying you and teasing you. 🤭</p><p class="quote">Somehow… you became my favourite person. ❤️</p><button onclick="go(5)">And then… →</button></div></section>
+
+<section class="page" id="p5"><div class="card"><p>The way you stayed</p><h2>You were always there</h2><p class="quote">“It was the way you stayed.”</p><p>Through every problem and every bad day, you stood by me. You took my side. You listened. You stayed.</p><p><b>You became the person I could always count on.</b> ❤️</p><button onclick="go(6)">One more thing →</button></div></section>
+
+<section class="page" id="p6"><div class="card"><p>A little confession</p><h2>No reason. Just you.</h2><p>I don't love you because of a reason.</p><p class="quote">“I just love you… because you're you.” ❤️</p><p>I want to love you for the rest of my life. No conditions. No reasons. Just you.</p><p class="quote">“I loved you yesterday. I love you more today. And I'll love you even more tomorrow.”</p><button onclick="go(7)">Keep reading →</button></div></section>
+
+<section class="page" id="p7"><div class="card"><p>📸 Our little moments</p><h2>Random memories, just for us</h2>
+<div class="gallery"><div class="photo"><img id="pic" src="photos/photo1.png"><div id="cap" class="caption">A little piece of us. ❤️</div></div>
+<button onclick="nextPhoto()">🔄 Change Photo</button></div>
+<label class="upload">📸 Add / replace photos<input id="upload" type="file" accept="image/*" multiple></label>
+<p style="font-size:12px;opacity:.6">You can replace these anytime.</p>
+<button onclick="go(8)">There's more →</button></div></section>
+
+<section class="page" id="p8"><div class="card"><p>The little things</p><h2>Every little thing about you</h2><div class="grid">
+<div class="tile">Your care ❤️</div><div class="tile">Your little jealousy 🤭</div><div class="tile">Your possessiveness 🫶🏻</div><div class="tile">Your silly moods 😭</div><div class="tile">Your teasing 😏</div><div class="tile">Your kisses 💋</div></div>
+<p class="quote">“I don't want just the easy parts of you. I want all of you.”</p><button onclick="go(9)">Okay… let's flirt →</button></div></section>
+
+<section class="page" id="p9"><div class="card"><p>For my Baby 👀</p><h2>Flirt back. I dare you. 😏</h2>
+<button onclick="flirt(1)">“You're looking cute today.”</button><button onclick="flirt(2)">“I miss your kisses.” 💋</button><button onclick="flirt(3)">“Come closer.” 🫣</button>
+<p id="fl" class="quote hidden"></p><button id="fn" class="hidden" onclick="go(10)">More trouble →</button></div></section>
+
+<section class="page" id="p10"><div class="card"><p>Boyfriend test 👀</p><h2>How well do you know me?</h2><div id="q1"><p>Who fell first?</p><button onclick="quiz(1)">You 😏</button><button class="secondary" onclick="quiz(1)">Me</button></div>
+<div id="q2" class="hidden"><p>Who gets annoyed faster?</p><button onclick="quiz(2)">Me 😭</button><button class="secondary" onclick="quiz(2)">You</button></div>
+<div id="q3" class="hidden"><p>What do I want most right now?</p><button onclick="quiz(3)">You ❤️</button><button class="secondary" onclick="quiz(3)">Food</button></div>
+<div id="q4" class="hidden"><p class="quote">Okay Kuchupuchu… you passed. 🥹❤️</p><button onclick="go(11)">Choose your punishment →</button></div></div></section>
+
+<section class="page" id="p11"><div class="card"><p>Uh-oh 😏</p><h2>Choose your punishment</h2><div class="grid">
+<div class="tile" onclick="punish('10 kisses 💋')">10 kisses 💋</div><div class="tile" onclick="punish('A long hug 🫂')">A long hug 🫂</div><div class="tile" onclick="punish('A cute selfie 📸')">A cute selfie 📸</div><div class="tile" onclick="punish('Let me steal your hoodie 😌')">Steal your hoodie 😌</div></div>
+<p id="pr" class="quote hidden"></p><button onclick="go(12)">Open when you miss me →</button></div></section>
+
+<section class="page" id="p12"><div class="card"><div class="sticker">💌</div><h2>Open when you miss me</h2><p>Click when you need a little reminder of us.</p><button onclick="document.getElementById('letter').classList.remove('hidden');burst()">Open it ❤️</button>
+<div id="letter" class="hidden"><p>Come here, idiot. 🥹❤️</p><p>Somewhere, someone is missing you just as much.</p><p><b>You are loved. You are wanted. And you are my favourite person.</b></p><p>Distance can keep us apart for a while, but it can never change what you mean to me.</p><p class="quote">“Someday, there'll be no screen between us. Just you and me.” 🤍</p><button onclick="go(13)">One last thing… 👀</button></div></div></section>
+
+<section class="page" id="p13"><div class="card"><p>For Himanshu ❤️</p><h2>If I had to choose you again…</h2><p class="quote">“I would. Every. Single. Time.” ❤️</p>
+<p>You're my Kuchupuchu, my Baby, my Cutuuu, my Sweetheart… and my favourite person to annoy. 😭💗</p><p class="quote">“I love you more than I did yesterday, but not as much as I will tomorrow.”</p><p><b>#Himya ❤️ &nbsp; #Himaakh</b></p><div class="sticker">🎀💋🫶🏻✨</div><p><b>This isn't the end of our story.<br>It's just another beautiful chapter.</b></p></div></section>
+
+<script>
+let photos=['photos/photo1.png','photos/photo2.png','photos/photo3.jpg','photos/photo4.png','photos/photo5.jpg','photos/photo6.jpg','photos/photo7.jpg','photos/photo8.jpg'];let i=0;
+function go(n){document.querySelectorAll('.page').forEach(x=>x.classList.remove('on'));document.getElementById('p'+n).classList.add('on');scrollTo(0,0);burst()}
+function nope(){document.getElementById('no').classList.remove('hidden');burst()}
+function nextPhoto(){i=(i+1)%photos.length;document.getElementById('pic').src=photos[i];document.getElementById('cap').textContent='A little piece of us. ❤️';burst()}
+document.getElementById('upload').addEventListener('change',e=>{let f=[...e.target.files];if(!f.length)return;photos=f.map(x=>URL.createObjectURL(x));i=0;document.getElementById('pic').src=photos[0];document.getElementById('cap').textContent='A new little memory. ❤️'})
+function flirt(n){let a=['You look cute too… but don’t get too confident. 🤭❤️','Then come get them, Baby. 😏💋','Only if you’re ready for a million kisses. 🫣💋'];document.getElementById('fl').textContent=a[n-1];document.getElementById('fl').classList.remove('hidden');document.getElementById('fn').classList.remove('hidden');burst()}
+function quiz(n){for(let x=1;x<=4;x++)document.getElementById('q'+x).classList.add('hidden');document.getElementById('q'+Math.min(n+1,4)).classList.remove('hidden')}
+function punish(t){document.getElementById('pr').textContent='Your punishment: '+t+' 😌❤️';document.getElementById('pr').classList.remove('hidden');burst()}
+function burst(){for(let x=0;x<8;x++){let h=document.createElement('span');h.className='heart';h.textContent=['❤️','💕','💗','🎀','✨','💋'][Math.floor(Math.random()*6)];h.style.left=Math.random()*100+'%';h.style.fontSize=(16+Math.random()*20)+'px';h.style.animationDuration=(3+Math.random()*3)+'s';document.getElementById('hearts').appendChild(h);setTimeout(()=>h.remove(),6500)}}
+</script></body></html>
